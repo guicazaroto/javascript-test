@@ -1,7 +1,4 @@
-exports.queryString = (obj) => {
-  const arr = Object.entries(obj).map((x) => {
-    return `${x[0]}=${x[1]}`
-  })
-
-  return arr.join('&')
-}
+exports.queryString = obj =>
+  Object.entries(obj)
+    .map(([key, value]) => `${key}=${value}`)
+    .join('&')
